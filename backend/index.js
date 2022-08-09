@@ -17,6 +17,6 @@ app.use('/public', express.static('public'))
 const port = process.env.PORT || 3003
 app.listen(port, ()=> console.log('Escuchando Puerto: ' + port))
 
-mongoose.connect('mongodb://localhost/tbmean', {useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://127.0.0.1:27017/tbmean', {useNewUrlParser: true, useUnifiedTopology: true})
     .then(()=> console.log('Conectado a MongoDb'))
     .catch(error => console.log('No se ha conetado a MongoDb'))
